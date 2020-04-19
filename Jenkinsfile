@@ -3,7 +3,7 @@
 pipeline {
   agent any
   environment {
-	  AWS_DEFAULT_REGION    = ""
+	  AWS_DEFAULT_REGION = ""
   }
   stages {
     stage("preflight") {
@@ -43,7 +43,6 @@ pipeline {
     stage("Deploy Test") {
       steps {
         echo "Deploy Test"
-        }
       }
     }
     stage("Functional Tests") {
@@ -55,22 +54,21 @@ pipeline {
     stage("Packaging") {
       steps {
         echo "Packaging"
-        }
       }
     }
     stage('Deploying') {
       steps {
-	echo "Deploying"
+        echo "Deploying"
       }
     }
     stage('Deploy Testing') {
       steps {
-	echo "Deploy Testing"
+        echo "Deploy Testing"
       }
     }
     stage('Clean Up') {
       steps {
-	echo "Clean up"
+        echo "Clean up"
       }
     }
   }
